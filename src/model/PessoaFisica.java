@@ -18,5 +18,13 @@ public class PessoaFisica extends Pessoa{
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public void exibePessoaFisica() {
+        System.out.println("Id: " + getId());
+        System.out.println("Nome: " + getNome());
+        System.out.println("Cpf: " + cpf);
+        System.out.println("Idade: " + idade);
+    }
+
     
 }
