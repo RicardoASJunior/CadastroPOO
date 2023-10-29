@@ -1,8 +1,17 @@
 package model;
 
+import java.io.Serializable;
 
-public class PessoaJuridica extends Pessoa {
+public class PessoaJuridica extends Pessoa implements Serializable {
     private String cnpj;
+
+    public PessoaJuridica() {
+    }
+
+    public PessoaJuridica(int id, String nome, String cnpj) {
+        super(id, nome);
+        this.cnpj = cnpj;
+    }
 
     public String getCnpj() {
         return cnpj;
@@ -12,9 +21,9 @@ public class PessoaJuridica extends Pessoa {
         this.cnpj = cnpj;
     }
 
-    public void exibePessoaJuridica() {
-        System.out.println("Id: " + getId());
-        System.out.println("Nome: " + getNome());
-        System.out.println("Cnpj: " + cnpj);
+    @Override
+    public void exibir() {
+        super.exibir();
+        System.out.println("CNPJ: " + this.cnpj);
     }
 }

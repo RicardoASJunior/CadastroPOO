@@ -1,10 +1,20 @@
 package model;
 
-public class Pessoa {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable {
     private int id;
     private String nome;
 
-    public int getId(){
+    public Pessoa() {
+    }
+
+    public Pessoa(int id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
+    public int getId() {
         return id;
     }
 
@@ -20,10 +30,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public void exibe() {
-        System.out.println("id: " + getId());
-        System.out.println("Nome: " + nome);
+    public void exibir() {
+        System.out.println("ID: " + this.id + ", Nome: " + this.nome);
     }
-
-    
 }
