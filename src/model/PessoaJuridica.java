@@ -25,5 +25,7 @@ public class PessoaJuridica extends Pessoa implements Serializable {
     public void exibir() {
         super.exibir();
         System.out.println("CNPJ: " + this.cnpj);
+        System.out.println("==============================");
+        
     }
 }

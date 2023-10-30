@@ -31,6 +31,8 @@ public class Pessoa implements Serializable {
     }
 
     public void exibir() {
-        System.out.println("ID: " + this.id + ", Nome: " + this.nome);
+        System.out.println("==============================");
+        System.out.println("ID: " + this.id );
+        System.out.println("Nome: " + this.nome);
     }
 }
